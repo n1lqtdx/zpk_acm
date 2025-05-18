@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Fetch user data</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZFG_G7_USER_DATATOP</SOBJ_NAME>
+    <SOBJ_NAME>LZFG_G7_USER_DATAU01</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZFG_G7_USER_DATA</SOBJ_NAME>
+   </INCLUDES>
+  </asx:values>
+ </asx:abap>
+</abapGit>

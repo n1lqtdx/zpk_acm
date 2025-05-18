@@ -1,0 +1,5 @@
+@EndUserText.label: 'Service Def. for all Data Def. Odata V2'
+define service ZUI_DATA_G7_O2 {
+  expose ZC_LOG_G7;
+  expose ZC_USR_G7;
+}

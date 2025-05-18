@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SMTG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <SMTG>
+    <HEADER>
+     <ID>ZTEMPLATE_EMAIL_LOCK_NOTIF</ID>
+     <VERSION>A</VERSION>
+     <IS_PREDELIVERED>X</IS_PREDELIVERED>
+    </HEADER>
+    <HEADER_T>
+     <SMTG_TMPL_HDR_T>
+      <ID>ZTEMPLATE_EMAIL_LOCK_NOTIF</ID>
+      <VERSION>A</VERSION>
+      <LANGU>E</LANGU>
+      <NAME>SAP Account Deactivation Warning</NAME>
+     </SMTG_TMPL_HDR_T>
+    </HEADER_T>
+    <CONTENT>
+     <SMTG_TMPL_CONT>
+      <ID>ZTEMPLATE_EMAIL_LOCK_NOTIF</ID>
+      <VERSION>A</VERSION>
+      <LANGU>E</LANGU>
+      <SUBJECT>SAP Account Deactivation Notification</SUBJECT>
+      <BODY_TXT>Dear {{ ID }},
+Your SAP account has been deactivated due to {{ longReason }}. Please find the details below:
+User ID
+Locked Date
+Reason
+Last Logon
+Session
+Status
+{{ ID }}
+{{ inactiveDate }}
+{{ shortReason }}
+{{ lastLogonTime }}
+{{ session }}
+{{ status }}
+If you need to regain access, please contact your manager or the IT support team. If this deactivation was expected, no further action is needed.
+This is an automated message. Please do not reply to this email.</BODY_TXT>
+      <BODY_HTML>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta name=&quot;generator&quot; content=&quot;HTML Tidy for HTML5 for ABAP version 5.6.0&quot;&gt;
+  &lt;style&gt;
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .red {
+            color: red        
+        }
+        h2 {
+            color: #333;
+        }
+        .table-container {
+            margin-top: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #666;
+        }
+  &lt;/style&gt;
+  &lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;h2&gt;Dear {{ ID }},&lt;/h2&gt;
+    &lt;p&gt;Your SAP account has been deactivated due to &lt;strong&gt;{{ longReason }}&lt;/strong&gt;. Please find the details below:&lt;/p&gt;
+    &lt;div class=&quot;table-container&quot;&gt;
+      &lt;table&gt;
+        &lt;tr&gt;
+          &lt;th&gt;User ID&lt;/th&gt;
+          &lt;th&gt;Locked Date&lt;/th&gt;
+          &lt;th&gt;Reason&lt;/th&gt;
+          &lt;th&gt;Last Logon&lt;/th&gt;
+          &lt;th&gt;Session&lt;/th&gt;
+          &lt;th&gt;Status&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;{{ ID }}&lt;/td&gt;
+          &lt;td&gt;{{ inactiveDate }}&lt;/td&gt;
+          &lt;td&gt;{{ shortReason }}&lt;/td&gt;
+          &lt;td&gt;{{ lastLogonTime }}&lt;/td&gt;
+          &lt;td&gt;{{ session }}&lt;/td&gt;
+          &lt;td&gt;{{ status }}&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+    &lt;p class=&apos;red&apos;&gt;If you need to regain access, please contact your manager or the IT support team. If this deactivation was expected, no further action is needed.&lt;/p&gt;
+    &lt;p class=&quot;footer&quot;&gt;This is an automated message. Please do not reply to this email.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</BODY_HTML>
+      <AUTOGEN_TXT>X</AUTOGEN_TXT>
+     </SMTG_TMPL_CONT>
+    </CONTENT>
+   </SMTG>
+  </asx:values>
+ </asx:abap>
+</abapGit>

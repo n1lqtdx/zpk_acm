@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>ZMSG_DISP_ALV_G7</ARBGB>
+    <MASTERLANG>E</MASTERLANG>
+    <STEXT>Messages for ALV Report</STEXT>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMSG_DISP_ALV_G7</ARBGB>
+     <MSGNR>000</MSGNR>
+     <TEXT>User &amp;1 has been recently locked. Are you sure re-locking this user?</TEXT>
+    </T100>
+   </T100>
+  </asx:values>
+ </asx:abap>
+</abapGit>

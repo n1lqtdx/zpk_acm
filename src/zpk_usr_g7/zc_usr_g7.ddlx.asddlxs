@@ -1,0 +1,148 @@
+@Metadata.layer: #CORE
+@UI.headerInfo: { typeNamePlural: 'Users',
+title: {
+    type: #STANDARD,
+    value: 'Username'
+},
+description: {
+    type: #STANDARD,
+    value: 'Type'
+} }
+
+annotate entity ZC_USR_G7 with
+{
+  @UI.facet: [
+
+  /* Header facts */
+  {
+      purpose: #HEADER,
+      position: 10,
+      type: #DATAPOINT_REFERENCE,
+      targetQualifier: 'LockReason'
+  },
+  {
+      purpose: #HEADER,
+      position: 20,
+      type: #DATAPOINT_REFERENCE,
+      targetQualifier: 'LockDate'
+  },
+
+  /* Standard facets */
+  // General Information
+  {
+    label: 'General Information',
+    id: 'GeneralInfo',
+    type: #COLLECTION,
+    position: 10
+  },
+  {
+    label: 'General',
+    purpose: #STANDARD,
+    position: 10,
+    type: #IDENTIFICATION_REFERENCE,
+    parentId: 'GeneralInfo'
+  },
+    {
+    label: 'Dates-related',
+    purpose: #STANDARD,
+    position: 20,
+    type: #FIELDGROUP_REFERENCE,
+    parentId: 'GeneralInfo',
+    targetQualifier: 'DatesGroup'
+  },
+  //section 'Logs'
+  {
+    id: 'Logs',
+    label: 'Logs',
+    purpose: #STANDARD,
+    type: #LINEITEM_REFERENCE,
+    position: 20,
+    targetElement: '_log'
+  }
+
+  ]
+
+
+  @UI.lineItem: [{ position: 10 }]
+  @UI.selectionField: [{ position: 10 }]
+  @Consumption.valueHelpDefinition: [{
+      entity: {
+          name: 'ZI_USR_VH_G7',
+          element: 'bname'
+      }
+  }]
+  Username;
+
+  @UI.lineItem: [{ position: 70 }]
+  @UI.selectionField: [{ position: 20 }]
+  @UI.identification: [{ position: 10 }]
+  @EndUserText.label: 'Type'
+  @Consumption.valueHelpDefinition: [{
+    entity: {
+        name: 'ZI_USRTYP_VH_G7',
+        element: 'UstypText'
+    }
+  }]
+  Type;
+
+  @UI.lineItem: [{ position: 20 }]
+  @UI.selectionField: [{ position: 40 }]
+  @UI.fieldGroup: [{ qualifier: 'DatesGroup', position: 10 }]
+  @Consumption.filter.selectionType: #INTERVAL
+  LastLogonDate;
+
+  @UI.lineItem: [{ position: 30 }]
+  @UI.fieldGroup: [{ qualifier: 'DatesGroup', position: 20 }]
+  LastLogonTime;
+
+  @UI.lineItem: [{ position: 60, value: 'LockReason', criticality: 'LockCriticality' }]
+  @UI.dataPoint: { qualifier: 'LockReason', title: 'Status', criticality: 'LockCriticality' }
+  @UI.selectionField: [{ position: 30 }]
+  @EndUserText.label: 'Status'
+  @Consumption.valueHelpDefinition: [{
+      entity: {
+          name: 'ZI_LOCKSTAT_VH_G7',
+          element: 'UflagText'
+      }
+  }]
+  LockReason;
+
+  @UI.lineItem: [{ position: 80 }]
+  @UI.dataPoint: { qualifier: 'LockDate', title: 'Lock Date' }
+  @UI.selectionField: [{ position: 50 }]
+  @EndUserText.label: 'Lock Date'
+  @UI.fieldGroup: [{ qualifier: 'DatesGroup', position: 30 }]
+  @Consumption.filter.selectionType: #INTERVAL
+  LockDate;
+
+  @UI.lineItem: [{ position: 90 }]
+  @UI.identification: [{ position: 20 }]
+  NoFailedLogonAttempts;
+
+  @UI.lineItem: [{ position: 120 }]
+  @UI.fieldGroup: [{ qualifier: 'DatesGroup', position: 40 }]
+  UserTimezone;
+
+  @UI.identification: [{ position: 30 }]
+  @UI.lineItem: [{ position: 110 }]
+  Address;
+
+  @UI.lineItem: [ { position: 40 } ]
+  @EndUserText.label: 'Days Since Last Logon'
+  DaysSinceInactive;
+
+  @UI.lineItem: [{ position: 50 }]
+  @Consumption.valueHelpDefinition: [{
+    entity: {
+        name: 'ZI_ACTSTAT_VH_G7',
+        element: 'ActStatText'
+    }
+  }]
+  @UI.textArrangement: #TEXT_ONLY
+  @UI.selectionField: [{position: 60}]
+  @EndUserText.label: 'Activity Status'
+  ActivityStatus;
+
+  //  @UI.lineItem: [ { position: 100 } ]
+  //  LogonSuccessRate;
+}

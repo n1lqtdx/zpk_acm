@@ -1,0 +1,30 @@
+@Metadata.layer: #CORE
+@UI.headerInfo: { typeNamePlural: 'Logs' }
+annotate entity ZC_LOG_G7 with
+{
+  @UI.lineItem: [{ position: 10, cssDefault.width: '25rem' }]
+  Id;
+  
+  @UI.lineItem: [{ position: 20 }]
+  Bname;
+  
+  @UI.lineItem: [{ position: 30, cssDefault.width: '8rem' }]
+  ActionType;
+  
+  @UI.lineItem: [{ position: 40 }]
+  Timestamp;
+  
+  @UI.lineItem: [{ position: 50 }]
+  @EndUserText.label: 'Locked By'
+  AdminUser;
+  
+  @UI.lineItem: [{ position: 60, cssDefault.width: '25rem' }]
+  @EndUserText.label: 'Program'
+  Report;
+  
+  @UI.lineItem: [{ position: 70 }]
+  Sysid;
+  
+  @UI.lineItem: [{ position: 80 }]
+  Spras;
+}
